@@ -17,13 +17,13 @@ namespace DemoMongo
 
             Console.WriteLine("------  Start database hit-------");
             #region List DataBase
-            var db_list = client.ListDatabases().ToList();
+            //var db_list = client.ListDatabases().ToList();
             
-            foreach (var db in db_list)
-            {
+            //foreach (var db in db_list)
+            //{
                 
-                Console.WriteLine(db.ToJson());
-            }
+            //    Console.WriteLine(db.ToJson());
+            //}
             #endregion
 
             #region Showing List Collect
@@ -38,7 +38,7 @@ namespace DemoMongo
             #endregion
 
 
-            #region Crete New Collection
+            #region Crete New DB and New Collection
             client.GetDatabase("csharp_demo_db").CreateCollection("products");
             #endregion
 

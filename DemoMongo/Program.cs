@@ -9,8 +9,9 @@ namespace DemoMongo
     class Program
     {
         static void Main(string[] args)
-        { 
-            DemoSet1.main();
+        {
+            // DemoSet1.main();
+            InsertDemo.main();
         }
     }
 }
