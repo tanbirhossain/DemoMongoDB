@@ -60,11 +60,14 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BulkWriteDemo.cs" />
     <Compile Include="DemoSet1.cs" />
+    <Compile Include="DropDemo.cs" />
     <Compile Include="FindDemo.cs" />
     <Compile Include="InsertDemo.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="UpdateDeleteDemo.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config">

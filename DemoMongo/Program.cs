@@ -6,7 +6,9 @@
         {
             // DemoSet1.main();
             // InsertDemo.main();
-            FindDemo.main();
+            //FindDemo.main();
+            //UpdateDeleteDemo.main();
+            //DropDemo.main();
         }
     }
 }

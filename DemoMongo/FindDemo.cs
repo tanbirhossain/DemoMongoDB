@@ -58,18 +58,29 @@ namespace DemoMongo
             #endregion
 
             #region Projection
+            //BsonDocument doc = new BsonDocument();
+            //var builder_proj = Builders<BsonDocument>.Projection;
+            //var projection_config = builder_proj.Include("price").Include("name").Exclude("_id");
+            //List<BsonDocument> list_docs = collection.Find(doc).Project(projection_config).Limit(4).ToList();
+            //foreach (var item in list_docs)
+            //{
+            //    Console.WriteLine(item);
+            //}
+            #endregion
+
+            #region Filter
             BsonDocument doc = new BsonDocument();
             var builder_proj = Builders<BsonDocument>.Projection;
             var projection_config = builder_proj.Include("price").Include("name").Exclude("_id");
-            
-            List<BsonDocument> list_docs = collection.Find(doc).Project(projection_config).Limit(4).ToList();
+            var builder_filter = Builders<BsonDocument>.Filter;
+            var filter_query = builder_filter.Gt("price", 50);
+         
+            List<BsonDocument> list_docs = collection.Find(filter_query).Project(projection_config).Limit(4).ToList();
             foreach (var item in list_docs)
             {
                 Console.WriteLine(item);
             }
             #endregion
-
-
 
             Console.ReadKey();
         }
